@@ -30,7 +30,7 @@
 		font-family: _font(family);
 		font-weight: _font(weight);
 		font-size: 1rem;
-		line-height: 2.375;
+		line-height: 1.85;
 	}
 
 	a {
@@ -58,7 +58,11 @@
 
 	p {
 		text-align: justify;
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 (_size(element-margin) * 0.75) 0;
+	}
+
+	.no-transform {
+		text-transform: none;
 	}
 
 	h1, h2, h3, h4, h5, h6 {

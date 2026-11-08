@@ -4,11 +4,12 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Massively by HTML5 UP</title>
+		<title>Hoang Pham-Van | AI Engineer</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Portfolio of Hoang Pham-Van, AI Engineer: ATLAS, ViGPT Researcher and Speech to Command." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -53,13 +54,13 @@
 							<article class="post featured">
 								<header class="major">
 									<h2><a href="https://github.com/phamvanhoang9/atlas">ATLAS &#127757;<br />
-								<span style="text-transform: none;">Agentic Task &amp; Literature Analysis System</span></a></h2>
-									<p>Still being built, and I am in no rush. I learn more from taking one system deeper than from chasing whatever shipped last week, so new technology goes in only when it earns its place.</p>
+									<span class="no-transform">Agentic Task &amp; Literature Analysis System</span></a></h2>
+									<p>Built to answer one question: can a research assistant show its work? I took one system deep instead of chasing whatever shipped that week, and added new technology only when it earned its place.</p>
 								</header>
-							<a href="https://github.com/phamvanhoang9/atlas" class="image main"><img src="images/atlas.png" alt="ATLAS &mdash; Agentic Task &amp; Literature Analysis System" /></a>
+								<a href="https://github.com/phamvanhoang9/atlas" class="image main"><img src="images/atlas.jpg" alt="Illustration of an ATLAS answer: numbered citations, a source list with quality scores, and a flagged disagreement between sources" /></a>
 							<p>In secondary school, an atlas was how you explored a world you had never seen. Mine does the same job in a different domain: it maps what is actually known about AI, and shows you where every fact came from.</p>
 							<p>Ask any chatbot for a literature review and you get something fluent and confident. What you cannot get is a reason to trust it. Which sources did it really read? Did it invent that citation? Would it tell you if two papers disagreed?</p>
-							<p>ATLAS is my answer. It researches AI topics: models, papers, tooling, benchmarks. Every piece of it is built so you can check the work. Five decisions carry that, and all five run today.</p>
+							<p>ATLAS is my answer. It researches AI topics: models, papers, tooling, benchmarks. Every piece of it is built so you can check the work. Five decisions carry that, and all five are implemented and tested.</p>
 							<ul class="divided">
 								<li><strong>The model cannot fabricate a citation.</strong> It only ever writes [1], [2]. The reference list is rebuilt afterwards from the URLs the scraper actually fetched, so a source that was never read cannot appear in it.</li>
 								<li><strong>Source quality is scored by rules, not by another model.</strong> Every URL lands in one of ten categories, from official documentation down to low quality, each with a fixed score. The logic is deterministic and unit tested, so the same URL always scores the same. Low quality pages never become primary evidence.</li>
@@ -67,8 +68,8 @@
 								<li><strong>Disagreement gets reported, not smoothed over.</strong> Deep runs produce a contradiction ledger and a confidence level worked out from the mix of sources behind the answer. Arithmetic, not the model grading its own homework.</li>
 								<li><strong>356 tests, and a security gate on every push.</strong> Semgrep, Gitleaks and a dependency audit run in CI and fail the build on any critical finding or leaked secret.</li>
 							</ul>
-							<p>The newest piece is Radar. You save a watch and it re-runs your topics on a schedule, then emails a digest where &ldquo;what&rsquo;s new&rdquo; is exact set membership over deduplicated URLs, not the model&rsquo;s recollection of what it saw last week.</p>
-							<p>No users yet, and I am not going to pretend otherwise. What I can point to is the reasoning. Every decision above is one I could have skipped and still had a working demo. I made them because a research tool that quietly makes things up is worse than no tool at all.</p>
+							<p>The last piece I built was Radar. You save a watch and it re-runs your topics on a schedule, then emails a digest where &ldquo;what&rsquo;s new&rdquo; is exact set membership over deduplicated URLs, not the model&rsquo;s recollection of what it saw last week.</p>
+							<p>It never had users, and I am not going to pretend otherwise. What I can point to is the reasoning. Every decision above is one I could have skipped and still had a working demo. I made them because a research tool that quietly makes things up is worse than no tool at all.</p>
 							<ul class="actions special">
 								<li><a href="https://github.com/phamvanhoang9/atlas" class="button large">View Project</a></li>
 							</ul>
@@ -78,24 +79,23 @@
 							<section class="posts">
 								<article>
 									<header>
-										<h2><a href="https://github.com/phamvanhoang9/vigpt-researcher"><span style="text-transform: none;">ViGPT Researcher</span><br />
-								</header>
-								<a href="https://github.com/phamvanhoang9/vigpt-researcher" class="image fit"><img src="images/vigpt.png" alt="ViGPT Researcher — An Intensive Research Assistant Powered By LLMs" /></a>
-								<p>My thesis project, built in five months. I graduated with a 9.0 overall in July 2024. The models available then, GPT-4o and Gemini 1.5 Flash among them, wrote fluently and got things wrong often enough that you could not use one for research without checking every claim by hand.
-								I read through the literature looking for a fix and built ViGPT around two techniques I found there: Retrieval-Augmented Generation, so answers come from retrieved documents instead of model memory, and Plan and Solve prompting, so the model breaks a question into steps before it answers. It reads live pages from the web and cites what it used.
-								ViGPT is where I found the problem. ATLAS is where I went at it properly.</p>
+										<h2><a href="https://github.com/phamvanhoang9/vigpt-researcher" class="no-transform">ViGPT Researcher</a></h2>
+									</header>
+									<a href="https://github.com/phamvanhoang9/vigpt-researcher" class="image fit"><img src="images/vigpt.jpg" alt="ViGPT Researcher — An Intensive Research Assistant Powered By LLMs" /></a>
+									<p>My thesis project, built in five months. I graduated with a 9.0 overall in July 2024. The models available then, GPT-4o and Gemini 1.5 Flash among them, wrote fluently and got things wrong often enough that you could not use one for research without checking every claim by hand.</p>
+									<p>I read through the literature looking for a fix and built ViGPT around two techniques I found there: Retrieval-Augmented Generation, so answers come from retrieved documents instead of model memory, and Plan and Solve prompting, so the model breaks a question into steps before it answers. It reads live pages from the web and cites what it used.</p>
+									<p>ViGPT is where I found the problem. ATLAS is where I went at it properly.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/phamvanhoang9/vigpt-researcher" class="button">View Project</a></li>
 									</ul>
 								</article>
 								<article>
 									<header>
-								<h2><a href="https://github.com/phamvanhoang9/SpeechToCommand"><span style="text-transform: none;">Speech to Command</span><br />
-								</header>
-								<a href="https://github.com/phamvanhoang9/SpeechToCommand" class="image fit"><img src="images/whisper.jpg" alt="Speech to Command — Voice-Controlled Interface for AI Systems" /></a>
-								<p>A voice control interface that turns speech into structured commands. I built the first version in seven days for the Round 2 technical evaluation at Viettel High Tech: audio capture, ASR, command parsing, and a deterministic execution layer driving five navigation commands (go, down, left, right, stop). Deterministic on purpose, because a control layer that guesses is one you cannot put in front of an operator.
-								I passed that round, joined the company, and built the production system there. I fine-tuned a Whisper model and deployed it as voice control for military operational systems, running about two seconds from spoken command to executed action. General purpose speech recognition does not know a domain&rsquo;s vocabulary, and in a control system a misheard word is not a typo.
-								</p>
+										<h2><a href="https://github.com/phamvanhoang9/SpeechToCommand" class="no-transform">Speech to Command</a></h2>
+									</header>
+									<a href="https://github.com/phamvanhoang9/SpeechToCommand" class="image fit"><img src="images/whisper.jpg" alt="Speech to Command — Voice-Controlled Interface for AI Systems" /></a>
+									<p>A voice control interface that turns speech into structured commands. I built the first version in seven days for the Round 2 technical evaluation at Viettel High Tech: audio capture, ASR, command parsing, and a deterministic execution layer driving five navigation commands (go, down, left, right, stop). Deterministic on purpose, because a control layer that guesses is one you cannot put in front of an operator.</p>
+									<p>I passed that round, joined the company, and built the production system there. I fine-tuned a Whisper model and deployed it as voice control for military operational systems, running about two seconds from spoken command to executed action. General purpose speech recognition does not know a domain&rsquo;s vocabulary, and in a control system a misheard word is not a typo.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/phamvanhoang9/SpeechToCommand" class="button">View Project</a></li>
 									</ul>
@@ -109,16 +109,15 @@
 						<section class="split contact">
 							<section class="alt">
 								<h3>Address</h3>
-								<p>Hanoi, Vietnam<br />
-								</p>
+								<p>Hanoi, Vietnam</p>
 							</section>
 							<section>
 								<h3>Phone</h3>
-								<p><a href="#">(+84) 865.203.425</a></p>
+								<p><a href="tel:+84865203425">(+84) 865.203.425</a></p>
 							</section>
 							<section>
 								<h3>Email</h3>
-								<p><a href="#">steve.pvhoang@gmail.com</a></p>
+								<p><a href="mailto:steve.pvhoang@gmail.com">steve.pvhoang@gmail.com</a></p>
 							</section>
 							<section>
 								<h3>Social</h3>
@@ -133,7 +132,7 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; Hoang Pham-Van</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>

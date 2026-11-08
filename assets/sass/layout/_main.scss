@@ -47,6 +47,15 @@
 
 			&.featured {
 				text-align: center;
+
+				ul.divided {
+					text-align: left;
+					margin: 0 0 _size(element-margin) 0;
+
+					li {
+						padding: 0.75rem 0;
+					}
+				}
 			}
 
 			@include breakpoint('<=large') {
