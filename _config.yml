@@ -1,0 +1,62 @@
+title: Hoang Pham-Van
+tagline: AI Engineer
+description: Portfolio and blog of Hoang Pham-Van, AI Engineer.
+author: Hoang Pham-Van
+url: https://phamvanhoang9.github.io
+baseurl: /stevehoang
+lang: en
+
+permalink: /blog/:year/:month/:title/
+timezone: Asia/Ho_Chi_Minh
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: blog/feed.xml
+
+exclude:
+  - README.md
+  - LICENSE.txt
+  - Gemfile
+  - Gemfile.lock
+  - assets/sass
+  - .claude
+
+# The Blog nav link appears once this many posts are published.
+blog_min_posts: 3
+
+social:
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/phamvanhoang
+    icon: fa-linkedin
+  - name: GitHub
+    url: https://github.com/phamvanhoang9
+    icon: fa-github
+  - name: Facebook
+    url: https://www.facebook.com/stevehoangix
+    icon: fa-facebook-f
+
+# Loaded in this order at the end of every page.
+scripts:
+  - jquery.min.js
+  - jquery.scrollex.min.js
+  - jquery.scrolly.min.js
+  - browser.min.js
+  - breakpoints.min.js
+  - util.js
+  - main.js
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      layout: post

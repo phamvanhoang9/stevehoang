@@ -1,0 +1,48 @@
+---
+layout: default
+title: Blog
+description: Notes on AI engineering, and on everything around it.
+---
+{% assign latest = site.posts.first %}
+{% if latest %}
+<article class="post featured">
+	<header class="major">
+		{% include post-date.html date=latest.date %}
+		<h2><a href="{{ latest.url | relative_url }}" class="no-transform">{{ latest.title }}</a></h2>
+		<p>{{ latest.description | default: latest.excerpt | strip_html }}</p>
+	</header>
+	{% if latest.image %}
+	<a href="{{ latest.url | relative_url }}" class="image main"><img src="{{ latest.image | relative_url }}" alt="{{ latest.image_alt }}" /></a>
+	{% endif %}
+	{% include tags.html tags=latest.tags %}
+	<ul class="actions special">
+		<li><a href="{{ latest.url | relative_url }}" class="button large">Read post</a></li>
+	</ul>
+</article>
+
+<section class="posts">
+	{% for post in site.posts offset: 1 %}
+	<article>
+		<header>
+			{% include post-date.html date=post.date %}
+			<h2><a href="{{ post.url | relative_url }}" class="no-transform">{{ post.title }}</a></h2>
+		</header>
+		{% if post.image %}
+		<a href="{{ post.url | relative_url }}" class="image fit"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}" /></a>
+		{% endif %}
+		<p>{{ post.description | default: post.excerpt | strip_html }}</p>
+		{% include tags.html tags=post.tags %}
+		<ul class="actions special">
+			<li><a href="{{ post.url | relative_url }}" class="button">Read post</a></li>
+		</ul>
+	</article>
+	{% endfor %}
+</section>
+{% else %}
+<section class="post">
+	<header class="major">
+		<h1>Blog</h1>
+		<p>No posts yet.</p>
+	</header>
+</section>
+{% endif %}

@@ -1,0 +1,22 @@
+---
+layout: default
+title: Tags
+description: Every blog post, grouped by tag.
+---
+<section class="post">
+	<header class="major">
+		<h1>Tags</h1>
+	</header>
+	{% assign tags = site.tags | sort %}
+	{% for tag in tags %}
+	<h2 id="{{ tag[0] | slugify }}" class="no-transform">{{ tag[0] }} ({{ tag[1].size }})</h2>
+	<ul class="divided">
+		{% for post in tag[1] %}
+		<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> &middot; {{ post.date | date: "%B %-d, %Y" }}</li>
+		{% endfor %}
+	</ul>
+	{% endfor %}
+	<ul class="actions special">
+		<li><a href="{{ '/blog/' | relative_url }}" class="button">All posts</a></li>
+	</ul>
+</section>

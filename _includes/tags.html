@@ -1,0 +1,7 @@
+{% if include.tags.size > 0 %}
+<ul class="actions special">
+	{% for tag in include.tags %}
+	<li><a href="{{ '/blog/tags/' | relative_url }}#{{ tag | slugify }}" class="button small">{{ tag }}</a></li>
+	{% endfor %}
+</ul>
+{% endif %}
